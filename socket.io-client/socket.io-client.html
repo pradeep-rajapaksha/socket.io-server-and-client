@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client End</title>
+</style>
+</head>
+
+<body id="chat">
+    <p>Client End</p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.7/socket.io.min.js"></script> 
+
+    <script>
+        var socket = io.connect('http://192.168.1.156:3000', {reconnect: true}); 
+        
+        document.addEventListener("DOMContentLoaded", function(event) {
+            socket.on('Cnt-YdD4KVRJLwOFAR9SXNfglopHfaKl-6sdv46s5d4fsd4f6s4df6s4df', function(message) {
+                    console.log(message)
+                }.bind(this));
+        }.bind(this));
+    </script>
+</body>
+</html>
